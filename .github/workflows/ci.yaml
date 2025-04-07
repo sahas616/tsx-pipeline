@@ -101,9 +101,10 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                 context: .
-                push: true
+                push: false
                 file: ./Dockerfile
                 tags: ghcr.io/${{ GITHUB.REPOSITORY }}:sha-${{ GITHUB.SHA }}
+                load: true
 
             - name: Run Trivy Scan
               uses: aquasecurity/trivy-action@0.28.0
