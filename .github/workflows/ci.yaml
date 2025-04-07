@@ -97,7 +97,7 @@ jobs:
                 username: ${{ GITHUB.ACTOR }}
                 password: ${{ secrets.TOKEN }}
 
-            - name: Build and Docker image
+            - name: Build Docker image
               uses: docker/build-push-action@v6
               with:
                 context: .
